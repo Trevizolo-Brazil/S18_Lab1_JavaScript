@@ -31,18 +31,17 @@ function changerStyle() {
 
   let qty = document.getElementById("qty").value;
   for( let i =0; i<qty;i++){
-    texte[i].style.color = "red";
+    texte[i].style.color = document.getElementById("couleur").value;
   }
 
 }
   
 function changerClassBoutons() {
   // Obtenir les éléments boutons et changer leur className pour celui qui est spécifié dans l'input
-  let buttonClass = document.getElementsByClassName("btn btn-primary");
+  let buttonClass = document.getElementsByTagName("button");
   let text = document.getElementById("btnClass").value;
   
-  for(let i=0; i<2; i++){
-    
-    buttonClass[i].className = text;
+  for(let btn of buttonClass){
+    btn.className = text;
   }
 }
